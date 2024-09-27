@@ -5,8 +5,7 @@ class Product:
       self.price = price
 
   def get_price(self, quantity):
-      return 9
-
+    
   def make_purchase(self, quantity):
       try:
         if quantity > self.amount:
@@ -20,8 +19,6 @@ class Product:
          print(f'Error:{e}')
         
 # create product object
-p = Product ('laptop', 150, 12)
-p.make_purchase(160)
 # make purchases against different product quantities (make sure to run each test case)
 # do not forget to handle exceptions
 # print the remaining stock after each purchase
