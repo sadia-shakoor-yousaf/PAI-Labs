@@ -5,12 +5,23 @@ class Product:
       self.price = price
 
   def get_price(self, quantity):
-      pass
+      return 9
 
   def make_purchase(self, quantity):
-      pass
-
+      try:
+        if quantity > self.amount:
+            raise ValueError(f'Not enough product available. Quantity must be less than {self.amount}')
+        elif quantity < 0:
+            raise ValueError('Quantity must be greater than 0.')
+        self.amount = self.amount - quantity
+        price = self.get_price(quantity)
+        print(f'Here\'s the total price charged: {price}')
+      except ValueError as e:
+         print(f'Error:{e}')
+        
 # create product object
+p = Product ('laptop', 150, 12)
+p.make_purchase(160)
 # make purchases against different product quantities (make sure to run each test case)
 # do not forget to handle exceptions
 # print the remaining stock after each purchase
