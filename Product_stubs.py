@@ -1,3 +1,5 @@
+# sp23-bai-047
+# sp23-bai-047
 class Product:
   def __init__(self, name, amount, price):
       self.name = name
@@ -31,6 +33,9 @@ class Product:
          print(f'Error:{e}')
         
 # create product object
+nose_pin = Product('Dimond Nose Pin', 50, 31000)
 # make purchases against different product quantities (make sure to run each test case)
+nose_pin.make_purchase(2)
 # do not forget to handle exceptions
 # print the remaining stock after each purchase
+print(f'Remaining Stock: {nose_pin.amount}')
