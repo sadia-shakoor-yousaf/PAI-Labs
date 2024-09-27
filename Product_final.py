@@ -1,5 +1,5 @@
 # sp23-bai-047
-# sp23-bai-047
+# sp23-bai-054
 class Product:
   def __init__(self, name, amount, price):
       self.name = name
